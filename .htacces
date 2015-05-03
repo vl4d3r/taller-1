@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Personalizar Errores del Navegador.
+# la [S] significa: si no se ejecuta esta regla, se ejecutara el siguiente.
+
+# Reglas de Escritura.
+
+RewriteRule^.*c-([0-9-a-z]+)\/$ index.php?accion=$1 [S] 
+
+# 
+RewriteRule^.*c=([0-9-a-z]+)/*/v-([0-9]+)\/$ index.php?accion=$1&valor=$2 [L]
+
+
